@@ -5,10 +5,12 @@ import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 @Document(collection = "todos")
 public class TodoDTO {
+	@Valid 
 	@Id
 	private String id;
 	@NotNull(message = "Todo cannot be NULL")
